@@ -2,12 +2,12 @@
 
 ## Overview
 
-SentinelAI v2 is a comprehensive, AI-powered cybersecurity analysis platform designed by Dr. Alexandra Chen. It provides enterprise-grade malware detection, vulnerability assessment, and intelligent threat analysis with gamification features and multi-LLM support.
+SentinelAI v2 is a comprehensive, AI-powered cybersecurity analysis platform.It provides enterprise-grade malware detection, vulnerability assessment, and intelligent threat analysis with gamification features and multi-LLM support.
 
 ## Key Features
 
 ### 🔍 **Multi-Engine Malware Detection**
-- **Local Scanning**: SHA256 + fuzzy hashing (TLSH/ppdeep), ClamAV + YARA rule-based detection
+- **Local Scanning**: SHA256 , ClamAV + YARA rule-based detection
 - **VirusTotal Integration**: Hash lookup optimization, file upload for unknown samples
 - **Intelligent Caching**: Reduces API calls and improves performance
 - **Quota Management**: Automatic fallback to local-only analysis when limits exceeded
@@ -285,7 +285,6 @@ pip install -r requirements-dev.txt
 
 ### Code Standards
 - **PEP 8**: Python style guide compliance
-- **Type Hints**: Full type annotation coverage
 - **Documentation**: Comprehensive docstrings
 - **Testing**: Unit tests for all components
 
@@ -295,27 +294,5 @@ pip install -r requirements-dev.txt
 - **Logging**: Audit all security-relevant events
 - **Dependencies**: Regular security updates
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Support
-
-### Documentation
-- **User Guide**: Comprehensive usage instructions
-- **API Reference**: Technical implementation details
-- **Security Best Practices**: Enterprise deployment guidance
-
-### Community
-- **GitHub Issues**: Bug reports and feature requests
-- **Discussions**: Community support and questions
-- **Security Reports**: Responsible disclosure process
-
-### Professional Support
-For enterprise deployments and custom integrations, contact Dr. Alexandra Chen's consulting team.
-
----
-
 **SentinelAI v2** - *Precision Cybersecurity Analysis*  
-Built with ❤️ by Dr. Alexandra Chen using Streamlit, LangChain, and Advanced AI
-"# SentinelAI" 
+Built with Streamlit, LangChain, and Advanced AI 
