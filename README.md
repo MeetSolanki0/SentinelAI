@@ -42,38 +42,6 @@ SentinelAI v2 is a comprehensive, AI-powered cybersecurity analysis platform.It 
 - **Prompt Injection Protection**: AI safety measures
 - **Input Sanitization**: Comprehensive validation and filtering
 
-## Installation
-
-### Prerequisites
-\`\`\`bash
-# Python 3.8+ required
-python --version
-
-# Install system dependencies (Ubuntu/Debian)
-sudo apt-get update
-sudo apt-get install clamav clamav-daemon yara python3-dev
-
-# Install system dependencies (macOS)
-brew install clamav yara
-
-# Install system dependencies (Windows)
-# Download ClamAV and YARA from official websites
-\`\`\`
-
-### Python Dependencies
-\`\`\`bash
-# Install from requirements.txt
-pip install -r requirements.txt
-
-# Or install manually
-pip install streamlit pandas plotly python-nmap yara-python pyclamd tlsh-python ppdeep reportlab cryptography requests asyncio
-\`\`\`
-
-### Setup Script
-\`\`\`bash
-# Run the automated setup
-python scripts/install_dependencies.py
-\`\`\`
 
 ## Quick Start
 
@@ -151,46 +119,6 @@ SentinelAI v2 follows a comprehensive 7-step workflow:
    └── Provide actionable insights
 \`\`\`
 
-## Configuration
-
-### LLM Providers
-\`\`\`json
-{
-  "llm_settings": {
-    "default_provider": "OpenAI",
-    "default_model": "gpt-4",
-    "max_tokens": 4000,
-    "temperature": 0.1
-  }
-}
-\`\`\`
-
-### Scan Settings
-\`\`\`json
-{
-  "scan_settings": {
-    "max_file_size_mb": 32,
-    "exclude_extensions": [".tmp", ".log", ".cache"],
-    "exclude_directories": ["/proc", "/sys", "/dev"],
-    "recursive_scan": true,
-    "hash_algorithms": ["sha256", "fuzzy"]
-  }
-}
-\`\`\`
-
-### Security Settings
-\`\`\`json
-{
-  "security_settings": {
-    "audit_logging": true,
-    "prompt_injection_protection": true,
-    "api_rate_limiting": true,
-    "max_requests_per_minute": 60,
-    "encryption_enabled": true
-  }
-}
-\`\`\`
-
 ## API Integration
 
 ### VirusTotal
@@ -222,38 +150,6 @@ SentinelAI v2 follows a comprehensive 7-step workflow:
 - **Permission Levels**: Configurable access to VAPT features
 - **Session Management**: Secure handling of authentication tokens
 
-## Troubleshooting
-
-### Common Issues
-
-**ClamAV Not Found**
-\`\`\`bash
-# Update ClamAV database
-sudo freshclam
-
-# Start ClamAV daemon
-sudo systemctl start clamav-daemon
-\`\`\`
-
-**YARA Rules Missing**
-\`\`\`bash
-# Check YARA installation
-yara --version
-
-# Verify rules directory
-ls -la rules/yara/
-\`\`\`
-
-**VirusTotal API Errors**
-- Verify API key validity
-- Check quota limits in VirusTotal dashboard
-- Ensure network connectivity
-
-**LLM Connection Issues**
-- Validate API key format
-- Check provider service status
-- Review rate limiting settings
-
 ### Performance Optimization
 
 **Large Directory Scans**
@@ -265,28 +161,6 @@ ls -la rules/yara/
 - Adjust max file size limits
 - Enable result caching
 - Monitor system resources
-
-## Contributing
-
-### Development Setup
-\`\`\`bash
-# Clone repository
-git clone https://github.com/your-org/sentinelai-v2.git
-cd sentinelai-v2
-
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # Linux/macOS
-venv\Scripts\activate     # Windows
-
-# Install development dependencies
-pip install -r requirements-dev.txt
-\`\`\`
-
-### Code Standards
-- **PEP 8**: Python style guide compliance
-- **Documentation**: Comprehensive docstrings
-- **Testing**: Unit tests for all components
 
 ### Security Guidelines
 - **Input Validation**: Sanitize all user inputs
